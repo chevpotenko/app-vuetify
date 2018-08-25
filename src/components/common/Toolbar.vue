@@ -28,15 +28,6 @@
 	
 	export default  {
 		name: 'Toolbar',
-		props: [],
-		mounted() {
-
-		},
-		data() {
-			return {
-				
-			}
-		},
 		methods: {
 			...mapMutations([
 				'toggleDrawer',

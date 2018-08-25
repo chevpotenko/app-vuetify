@@ -22,7 +22,7 @@
 		<v-list>
 			<v-list-tile
 				value="true"
-				v-for="(item, i) in items"
+				v-for="(item, i) in menu"
 				:key="i"
 				>
 				<v-list-tile-action>
@@ -45,12 +45,9 @@
 </template>
 
 <script lang="js">
+
 	export default  {
 		name: 'left-aside',
-		props: [],
-		mounted() {},
-		data() {return {}},
-		methods: {},
 		computed: {
 			miniVariant() {
 				return this.$store.state.miniVariant;
@@ -66,8 +63,8 @@
 					return this.$store.state.drawer;
 				}
 			},
-			items() {
-				return this.$store.state.items;
+			menu() {
+				return this.$store.state.menu;
 			}
 		}
 	}

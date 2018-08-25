@@ -11,7 +11,6 @@
 </template>
 
 <script>
-	import Main from './components/pages/main';
 	import Toolbar from './components/common/Toolbar';
 	import AppFooter from './components/common/app-footer';
 	import RightAside from './components/common/right-aside';
@@ -20,7 +19,6 @@
 	export default {
 		name: 'App',		
 		components: {
-			Main,
 			Toolbar,
 			AppFooter,
 			RightAside,

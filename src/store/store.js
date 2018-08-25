@@ -11,7 +11,7 @@ const store = new Vuex.Store({
 		right: true,
 		rightDrawer: false,
 		title: 'App - Vue',
-		items: [
+		menu: [
 			{
 				icon: 'bubble_chart',
 				title: 'eDetailing',
@@ -28,6 +28,32 @@ const store = new Vuex.Store({
 			{
 				icon: 'access_time',
 				title: 'Item 2'
+			}
+		],
+		presentations: [
+			{
+				id: '1',
+				name: 'Presentation 1'
+			},
+			{
+				id: '2',
+				name: 'Presentation 2'
+			},
+			{
+				id: '3',
+				name: 'Presentation 3'
+			},
+			{
+				id: '4',
+				name: 'Presentation 4'
+			},
+			{
+				id: '5',
+				name: 'Presentation 5'
+			},
+			{
+				id: '6',
+				name: 'Presentation 6'
 			}
 		]
 	},

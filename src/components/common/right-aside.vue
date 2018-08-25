@@ -22,9 +22,6 @@
 
 	export default  {
 		name: 'right-aside',
-		props: [],
-		mounted() {},
-		data() {return {}},
 		methods: {
 			...mapMutations([				
 				'toggleRight'

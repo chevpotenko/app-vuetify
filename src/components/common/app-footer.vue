@@ -7,10 +7,6 @@
 <script lang="js">
 	export default {
 		name: 'app-footer',
-		props: [],
-		mounted() {},
-		data() {return {}},
-		methods: {},
 		computed: {
 			fixed() {
 				return this.$store.state.fixed;
