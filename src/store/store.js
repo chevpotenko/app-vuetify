@@ -17,15 +17,15 @@ const store = new Vuex.Store({
 				title: 'eDetailing'
 			},
 			{
-				icon: 'bubble_chart',
+				icon: 'email',
 				title: 'Templates'
 			},
 			{
-				icon: 'bubble_chart',
+				icon: 'drafts',
 				title: 'Item 1'
 			},
 			{
-				icon: 'bubble_chart',
+				icon: 'access_time',
 				title: 'Item 2'
 			}
 		]
@@ -43,9 +43,9 @@ const store = new Vuex.Store({
 		toggleClipped(state) {
 			state.clipped = !state.clipped;
 		},
-		toggleRightDrawer(state) {
-			state.rightDrawer = !state.rightDrawer;
-		},
+		toggleRightDrawer(state, value) {			
+			state.rightDrawer = value;
+		},		
 		toggleRight(state) {
 			state.right = !state.right;
 		}

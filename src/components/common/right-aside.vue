@@ -40,12 +40,13 @@
 			right() {
 				return this.$store.state.right;
 			},			
-			rightDrawer: {				
+			
+			rightDrawer: {
 				get() {
-					return this.$store.state.rightDrawer;
+					return this.$store.state.rightDrawer
 				},
-				set() {
-					return this.$store.state.rightDrawer;
+				set(value) {
+					this.$store.commit('toggleRightDrawer',value);
 				}
 			}
 		}

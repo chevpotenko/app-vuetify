@@ -15,7 +15,7 @@
 		</v-btn>
 		<v-toolbar-title v-text="title"></v-toolbar-title>
 		<v-spacer></v-spacer>
-		<v-btn icon @click.stop="toggleRightDrawer()">
+		<v-btn icon @click.stop="toggleRightDrawer(true)">
 			<v-icon>menu</v-icon>
 		</v-btn>
 	</v-toolbar>
