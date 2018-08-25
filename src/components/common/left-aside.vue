@@ -1,3 +1,14 @@
+<i18n>
+	{
+		"en": {
+			"hello": "hello world!"
+		},
+		"ja": {
+			"hello": "こんにちは、世界！"
+		}
+	}
+</i18n>
+
 <template lang="html">
 	<v-navigation-drawer
 		persistent
@@ -18,7 +29,7 @@
 					<v-icon v-html="item.icon"></v-icon>
 				</v-list-tile-action>
 				<v-list-tile-content>
-					<v-list-tile-title v-text="item.title"></v-list-tile-title>
+					<v-list-tile-title>{{ $t('hello') }}</v-list-tile-title>
 				</v-list-tile-content>
 			</v-list-tile>
 		</v-list>
@@ -29,17 +40,9 @@
 	export default  {
 		name: 'left-aside',
 		props: [],
-		mounted() {
-
-		},
-		data() {
-			return {
-
-			}
-		},
-		methods: {
-
-		},
+		mounted() {},
+		data() {return {}},
+		methods: {},
 		computed: {
 			miniVariant() {
 				return this.$store.state.miniVariant;

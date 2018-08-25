@@ -18,7 +18,7 @@
 	import LeftAside from './components/common/left-aside';
 
 	export default {
-		name: 'App',
+		name: 'App',		
 		components: {
 			Main,
 			Toolbar,
