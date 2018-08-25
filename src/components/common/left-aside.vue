@@ -29,7 +29,15 @@
 					<v-icon v-html="item.icon"></v-icon>
 				</v-list-tile-action>
 				<v-list-tile-content>
-					<v-list-tile-title>{{ $t('hello') }}</v-list-tile-title>
+					<v-list-tile-title>
+						<router-link
+							v-if="item.link"
+							to="/edetailing"
+							exact>
+							{{ $t('hello') }}
+						</router-link>
+						<span v-else>{{ $t('hello') }}</span>					
+					</v-list-tile-title>
 				</v-list-tile-content>
 			</v-list-tile>
 		</v-list>

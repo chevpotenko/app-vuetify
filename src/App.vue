@@ -3,7 +3,7 @@
 		<left-aside></left-aside>		
 		<toolbar></toolbar>
 		<v-content>
-			<Main/>
+			<router-view></router-view> 
 		</v-content>
 		<right-aside></right-aside>
 		<app-footer></app-footer>

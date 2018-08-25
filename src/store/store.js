@@ -14,7 +14,8 @@ const store = new Vuex.Store({
 		items: [
 			{
 				icon: 'bubble_chart',
-				title: 'eDetailing'
+				title: 'eDetailing',
+				link: 'edetailing'
 			},
 			{
 				icon: 'email',
