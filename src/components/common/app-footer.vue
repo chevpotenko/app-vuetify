@@ -1,17 +1,12 @@
 <template lang="html">
-	<v-footer :fixed="fixed" app>
+	<v-footer app>
 		<span>&copy; 2018</span>
 	</v-footer>
 </template>
 
 <script lang="js">
 	export default {
-		name: 'app-footer',
-		computed: {
-			fixed() {
-				return this.$store.state.fixed;
-			}
-		}
+		name: 'app-footer'
 	}
 </script>
 

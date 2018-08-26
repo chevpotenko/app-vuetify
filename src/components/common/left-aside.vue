@@ -1,14 +1,3 @@
-<i18n>
-	{
-		"en": {
-			"hello": "hello world!"
-		},
-		"ja": {
-			"hello": "こんにちは、世界！"
-		}
-	}
-</i18n>
-
 <template lang="html">
 	<v-navigation-drawer
 		persistent
@@ -16,7 +5,6 @@
 		:clipped="clipped"
 		v-model="drawer"
 		enable-resize-watcher
-		fixed
 		app
 		>
 		<v-list>
@@ -26,17 +14,26 @@
 				:key="i"
 				>
 				<v-list-tile-action>
-					<v-icon v-html="item.icon"></v-icon>
+					<router-link
+							v-if="item.link"
+							to="/edetailing"
+							exact
+							class="menu-icon"
+							>
+							<v-icon v-html="item.icon"></v-icon>
+					</router-link>
+					<v-icon  v-else v-html="item.icon"></v-icon>					
 				</v-list-tile-action>
 				<v-list-tile-content>
 					<v-list-tile-title>
 						<router-link
 							v-if="item.link"
 							to="/edetailing"
-							exact>
-							{{ $t('hello') }}
+							exact
+							>
+							{{item.title }}
 						</router-link>
-						<span v-else>{{ $t('hello') }}</span>					
+						<span v-else>{{item.title }}</span>					
 					</v-list-tile-title>
 				</v-list-tile-content>
 			</v-list-tile>
@@ -45,7 +42,6 @@
 </template>
 
 <script lang="js">
-
 	export default  {
 		name: 'left-aside',
 		computed: {
@@ -54,7 +50,7 @@
 			},
 			clipped() {
 				return this.$store.state.clipped;
-			},
+			},			
 			drawer: {
 				get() {
 					return this.$store.state.drawer;
@@ -71,5 +67,7 @@
 </script>
 
 <style scoped lang="css">
-	
+	.menu-icon{
+		text-decoration: none;
+	}
 </style>

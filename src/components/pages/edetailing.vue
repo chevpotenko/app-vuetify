@@ -44,19 +44,14 @@
 </template>
 
 <script>
-	import * as VCard from 'vuetify/es5/components/VCard';
 	import defaultImage from '@/assets/road.jpg';
-
 	export default {
 		name: 'Edetailing',
 		data: function() {
 			return {
 				defaultImage: defaultImage
 			}
-		},
-		components: {
-			...VCard
-		},
+		},		
 		computed: {
 			presentations() {
 				return this.$store.state.presentations;

@@ -6,7 +6,6 @@ const store = new Vuex.Store({
 	state: {
 		clipped: false,
 		drawer: false,
-		fixed: false,
 		miniVariant: false,
 		right: true,
 		rightDrawer: false,
@@ -55,6 +54,20 @@ const store = new Vuex.Store({
 				id: '6',
 				name: 'Presentation 6'
 			}
+		],
+		currentLanguage: {
+			id: 'en',
+			name: 'English'
+		},
+		languages: [
+			{
+				id: 'en',
+				name: 'English'
+			},
+			{
+				id: 'ja',
+				name:'Japanese'
+			}
 		]
 	},
 	mutations: {
@@ -64,9 +77,6 @@ const store = new Vuex.Store({
 		toggleMiniVariant(state) {
 			state.miniVariant = !state.miniVariant;
 		},
-		toggleFixed(state) {
-			state.fixed = !state.fixed;
-		},
 		toggleClipped(state) {
 			state.clipped = !state.clipped;
 		},
@@ -75,6 +85,9 @@ const store = new Vuex.Store({
 		},		
 		toggleRight(state) {
 			state.right = !state.right;
+		},
+		setLanguage(state, language){
+			state.currentLanguage = language
 		}
 	}
   });
