@@ -12,21 +12,19 @@ const store = new Vuex.Store({
 		title: 'App - Vue',
 		menu: [
 			{
+				icon: 'home',
+				title: 'Home',
+				link: '/'
+			},
+			{
 				icon: 'bubble_chart',
 				title: 'eDetailing',
 				link: 'edetailing'
 			},
 			{
 				icon: 'email',
-				title: 'Templates'
-			},
-			{
-				icon: 'drafts',
-				title: 'Item 1'
-			},
-			{
-				icon: 'access_time',
-				title: 'Item 2'
+				title: 'Templates',
+				link: 'templates'
 			}
 		],
 		presentations: [

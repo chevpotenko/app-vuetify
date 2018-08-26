@@ -9,32 +9,15 @@
 		>
 		<v-list>
 			<v-list-tile
-				value="true"
 				v-for="(item, i) in menu"
 				:key="i"
+				:to="item.link ? item.link : '/'"
 				>
-				<v-list-tile-action>
-					<router-link
-							v-if="item.link"
-							to="/edetailing"
-							exact
-							class="menu-icon"
-							>
-							<v-icon v-html="item.icon"></v-icon>
-					</router-link>
-					<v-icon  v-else v-html="item.icon"></v-icon>					
+				<v-list-tile-action>					
+					<v-icon v-html="item.icon"></v-icon>									
 				</v-list-tile-action>
 				<v-list-tile-content>
-					<v-list-tile-title>
-						<router-link
-							v-if="item.link"
-							to="/edetailing"
-							exact
-							>
-							{{item.title }}
-						</router-link>
-						<span v-else>{{item.title }}</span>					
-					</v-list-tile-title>
+					<v-list-tile-title>{{item.title }}</v-list-tile-title>
 				</v-list-tile-content>
 			</v-list-tile>
 		</v-list>

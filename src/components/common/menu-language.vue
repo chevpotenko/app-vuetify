@@ -3,7 +3,6 @@
 		<v-btn
 			slot="activator"
 			color="primary"
-			dark
 		>
 			{{currentLanguage.name}}
 		</v-btn>
