@@ -7,7 +7,7 @@ import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 
 import store from './store/store'
-import routes from './routes'
+import routes from './routes/routes'
 
 const router = new VueRouter({
     routes: routes,

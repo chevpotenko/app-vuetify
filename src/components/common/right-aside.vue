@@ -29,8 +29,7 @@
 		computed: {
 			right() {
 				return this.$store.state.right;
-			},			
-			
+			},
 			rightDrawer: {
 				get() {
 					return this.$store.state.rightDrawer

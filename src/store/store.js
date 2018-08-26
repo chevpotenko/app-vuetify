@@ -71,8 +71,11 @@ const store = new Vuex.Store({
 		]
 	},
 	mutations: {
-		toggleDrawer(state) {
+		toggleDrawer(state) {							
 			state.drawer = !state.drawer;
+		},
+		setDrawer(state, value) {
+			state.drawer = value;
 		},
 		toggleMiniVariant(state) {
 			state.miniVariant = !state.miniVariant;

@@ -55,8 +55,8 @@
 				get() {
 					return this.$store.state.drawer;
 				},
-				set() {
-					return this.$store.state.drawer;
+				set(value) {
+					this.$store.commit('setDrawer', value);
 				}
 			},
 			menu() {
