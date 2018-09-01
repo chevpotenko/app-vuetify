@@ -1,4 +1,4 @@
-# app-vue
+# App-vuetify
 
 ## Project setup
 ```
@@ -18,4 +18,11 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Development
+
+Generate new module for store:
+```sh
+$ node generateVuexModule.js yourModuleName
 ```
