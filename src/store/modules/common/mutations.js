@@ -17,7 +17,7 @@ export default {
     toggleRight(state) {
         state.right = !state.right;
     },
-    setLanguage(state, language){
+    setLanguage(state, language) {
         state.currentLanguage = language
     }
 }

@@ -6,40 +6,42 @@ const modulesPath = 'src/store/modules';
 const args = process.argv.slice(2);
 
 const error = (...args) => {
-  console.log(chalk.red(...args));
+	console.log(chalk.red(...args));
 };
 
 const success = (...args) => {
-  console.log(chalk.green(...args));
+	console.log(chalk.green(...args));
 };
 
 if (!args.length) {
-  error('You must provide a name for the module!');
-  return;
+	error('You must provide a name for the module!');
+	return;
 }
 
 const moduleName = args[0];
 const modulePath = path.join(__dirname, '../', modulesPath, moduleName);
 
 if (fs.existsSync(modulePath)) {
-  error(`${moduleName} directory already exists!`);
-  return;
+	error(`${moduleName} directory already exists!`);
+	return;
 }
 
 const stateContent = `import getters from './getters';
 import actions from './actions';
 import mutations from './mutations';
-const state = {};
+
+const state = {
+
+};
+
 export default {
-  state,
-  getters,
-  actions,
-  mutations
+	state,
+	getters,
+	actions,
+	mutations
 };
 `;
-const exportFileContent = `export default {
-};
-`;
+const exportFileContent = `export default {};`;
 
 const statePath = `${path.join(modulePath, `${moduleName}.js`)}`
 const gettersPath = `${path.join(modulePath, 'getters.js')}`
