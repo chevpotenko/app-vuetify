@@ -1,21 +1,21 @@
-import main from '../components/pages/main/main.vue';
-import edetailing from '../components/pages/edetailing/edetailing.vue';
-import templates from '../components/pages/templates/templates.vue';
+import PageMain from '../components/pages/main/page-main.vue';
+import Edetailing from '../components/pages/edetailing/edetailing.vue';
+import Templates from '../components/pages/templates/templates.vue';
 
 export default [
 	{
 		name: 'main',
 		path: '/',
-		component: main
+		component: PageMain
 	},
 	{
 		name: 'edetailing',
 		path: '/edetailing',
-		component: edetailing
+		component: Edetailing
 	},
 	{
 		name: 'templates',
 		path: '/templates',
-		component: templates
+		component: Templates
 	}
 ]

@@ -1,10 +1,7 @@
 <template lang="html">
 	<v-menu>
-		<v-btn
-			slot="activator"
-			color="primary"
-		>
-			{{currentLanguage.name}}
+		<v-btn slot="activator" color="primary">
+			{{ currentLanguage.name }}
 		</v-btn>
 		<v-list>
 			<v-list-tile
@@ -22,7 +19,7 @@
 	import i18n from '../../main';
 	import { mapMutations } from 'vuex';
 	export default {
-		name: 'menu-language',
+		name: 'app-menu-language',
 		methods: {
 			setLanguage(item) {
 				i18n.locale = item.id;

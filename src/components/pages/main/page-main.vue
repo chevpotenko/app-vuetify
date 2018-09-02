@@ -29,7 +29,7 @@
 
 <script>
 	export default {
-		name: 'Main'
+		name: 'page-main'
 	}
 </script>
 

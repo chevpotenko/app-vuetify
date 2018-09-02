@@ -25,7 +25,7 @@
 
 <script>
 	export default {
-		name: 'page-templates'
+		name: 'templates'
 	}
 </script>
 

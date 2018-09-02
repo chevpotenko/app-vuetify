@@ -6,7 +6,7 @@
 				v-for="item in presentations"							
 				:key="item.id"
 			>
-				<edetailing-item :data="item"></edetailing-item>
+				<edetailing-item :item="item"></edetailing-item>
 			</v-flex>
 		</v-layout>
 	</v-container>
@@ -15,7 +15,7 @@
 <script>
 	import EdetailingItem from './edetailing-item';
 	export default {
-		name: 'Edetailing',
+		name: 'edetailing',
 		components: {
 			EdetailingItem
 		},			

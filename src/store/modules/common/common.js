@@ -3,11 +3,7 @@ import mutations from './mutations';
 import getters from './getters';
 
 const state = {
-    clipped: false,
     drawer: false,
-    miniVariant: false,
-    right: true,
-    rightDrawer: false,
     title: 'App - Vue',
     menu: [
         {

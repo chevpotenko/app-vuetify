@@ -1,28 +1,25 @@
 <template>
 	<v-app>
-		<left-aside></left-aside>		
-		<toolbar></toolbar>
+		<app-left-aside></app-left-aside>		
+		<app-toolbar></app-toolbar>
 		<v-content>
 			<router-view></router-view>
 		</v-content>
-		<right-aside></right-aside>
 		<app-footer></app-footer>		
 	</v-app>
 </template>
 
 <script>
-	import Toolbar from './components/common/Toolbar';
+	import AppToolbar from './components/common/app-toolbar';
 	import AppFooter from './components/common/app-footer';
-	import RightAside from './components/common/right-aside';
-	import LeftAside from './components/common/left-aside';	
+	import AppLeftAside from './components/common/app-left-aside';	
 
 	export default {
 		name: 'App',		
 		components: {
-			Toolbar,
+			AppToolbar,
 			AppFooter,
-			RightAside,
-			LeftAside
+			AppLeftAside
 		}
 	}
 </script>

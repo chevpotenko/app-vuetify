@@ -12,7 +12,7 @@
 				>
 				<v-layout fill-height>
 					<v-flex xs12 align-end flexbox>
-						<span class="headline white--text" v-text="data.name"></span>
+						<span class="headline white--text" v-text="item.name"></span>
 					</v-flex>
 				</v-layout>
 			</v-container>
@@ -36,11 +36,16 @@
 <script>
 	import defaultImage from '@/assets/road.jpg';
 	export default {
-		name: 'Edetailing',
-		props:['data'],				
+		name: 'edetailing-item',
+		props:{
+			item: {
+				type: Object,
+				required: true
+			}
+		},				
 		computed: {
 			image: function() {
-				return this.data.image ? this.data.image : defaultImage;
+				return this.item.image ? this.item.image : defaultImage;
 			}
 		}
 	}

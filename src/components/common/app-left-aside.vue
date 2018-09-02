@@ -1,8 +1,6 @@
 <template lang="html">
 	<v-navigation-drawer
 		persistent
-		:mini-variant="miniVariant"
-		:clipped="clipped"
 		v-model="drawer"
 		enable-resize-watcher
 		app
@@ -17,7 +15,7 @@
 					<v-icon v-html="item.icon"></v-icon>									
 				</v-list-tile-action>
 				<v-list-tile-content>
-					<v-list-tile-title>{{item.title }}</v-list-tile-title>
+					<v-list-tile-title>{{ item.title }}</v-list-tile-title>
 				</v-list-tile-content>
 			</v-list-tile>
 		</v-list>
@@ -26,14 +24,8 @@
 
 <script lang="js">
 	export default  {
-		name: 'left-aside',
-		computed: {
-			miniVariant() {
-				return this.$store.state.miniVariant;
-			},
-			clipped() {
-				return this.$store.state.clipped;
-			},			
+		name: 'app-left-aside',
+		computed: {					
 			drawer: {
 				get() {
 					return this.$store.state.drawer;
@@ -50,7 +42,5 @@
 </script>
 
 <style scoped lang="css">
-	.menu-icon{
-		text-decoration: none;
-	}
+	
 </style>
