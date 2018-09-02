@@ -22,6 +22,7 @@
 				</p>				
 				<p class="display-4 font-weight-black">App</p>
 				<p class="display-4 font-weight-black">{{ $t("message.hello") }}</p>
+				<p class="display-4 font-weight-black">{{ $t("common_hello") }}</p>
 			</v-layout>
 		</v-slide-y-transition>
 	</v-container>

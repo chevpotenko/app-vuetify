@@ -8,16 +8,20 @@ import VueRouter from 'vue-router'
 
 import store from './store/store'
 import routes from './routes/routes'
+import locales from './i18n/lang'
 
 const router = new VueRouter({
     routes: routes,
     mode: 'history'
 });
+
 Vue.use(VueRouter);
 
 Vue.use(VueI18n);
+
 const i18n = new VueI18n({
-    locale: 'en'
+    locale: 'en',
+    messages: locales
 });
 
 Vue.config.productionTip = false;
