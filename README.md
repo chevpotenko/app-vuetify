@@ -24,5 +24,5 @@ npm run lint
 
 Generate new module for store:
 ```sh
-$ node generateVuexModule.js yourModuleName
+$ node scripts/generateVuexModule.js yourModuleName
 ```
