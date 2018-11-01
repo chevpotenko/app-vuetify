@@ -16,7 +16,7 @@
 </template>
 
 <script lang="js">
-	import i18n from '../../main';
+	import i18n from '../../i18n/lang';
 	import { mapMutations } from 'vuex';
 	export default {
 		name: 'app-menu-language',

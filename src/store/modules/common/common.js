@@ -20,6 +20,11 @@ const state = {
             icon: 'email',
             title: 'Templates',
             link: 'templates'
+        },
+        {
+            icon: 'bubble_chart',
+            title: 'About',
+            link: 'about'
         }
     ],		
     currentLanguage: {
