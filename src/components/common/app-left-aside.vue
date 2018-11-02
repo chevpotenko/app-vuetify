@@ -25,26 +25,29 @@
 <script lang="js">
 	import { mapState } from 'vuex';
 	import { mapMutations } from 'vuex';
+	import { SET_DRAWER } from '../../store/mutation-types'
 
 	export default  {
-		name: 'app-left-aside',		
+		name: 'app-left-aside',
+
 		computed: {
-			...mapState({
-				 menu: 'menu',
-				 drawer: 'drawer'
-			}),
+			...mapState('common', [
+				'menu',
+			]),
+
 			drawer: {
 				get() {
-					return this.$store.state.drawer;
+					return this.$store.state.common.drawer;
 				},
 				set(value) {
 					this.setDrawer(value);
 				}
 			}
 		},
+		
 		methods: {
-			...mapMutations({
-				setDrawer: 'SET_DRAWER'
+			...mapMutations('common', {
+				setDrawer: SET_DRAWER
 			})
 		}
 	}

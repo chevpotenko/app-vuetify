@@ -37,12 +37,14 @@
 	import defaultImage from '@/assets/road.jpg';
 	export default {
 		name: 'edetailing-item',
+
 		props:{
 			item: {
 				type: Object,
 				required: true
 			}
 		},				
+		
 		computed: {
 			image: function() {
 				return this.item.image ? this.item.image : defaultImage;

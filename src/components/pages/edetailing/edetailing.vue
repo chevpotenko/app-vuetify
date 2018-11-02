@@ -13,16 +13,20 @@
 </template>
 
 <script>
-	import EdetailingItem from './edetailing-item';
+	import EdetailingItem from './edetailing-item';	
+	import { mapState } from 'vuex';
+
 	export default {
 		name: 'edetailing',
+		
 		components: {
 			EdetailingItem
-		},			
+		},
+
 		computed: {
-			presentations() {
-				return this.$store.state.presentations;
-			}
+			...mapState('presentations', [
+				'presentations'
+			])
 		}
 	}
 </script>

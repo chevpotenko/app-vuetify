@@ -1,6 +1,4 @@
-import { SET_DRAWER } from '../../mutation-types'
-import { TOGGLE_DRAWER } from '../../mutation-types'
-import { SET_LANGUAGE } from '../../mutation-types'
+import { SET_DRAWER, TOGGLE_DRAWER, SET_LANGUAGE } from '../../mutation-types'
 
 export default {
     [SET_DRAWER](state, value) {

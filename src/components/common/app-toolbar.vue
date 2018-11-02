@@ -14,22 +14,26 @@
 
 <script lang="js">
 	import { mapMutations } from 'vuex';
+	import { TOGGLE_DRAWER } from '../../store/mutation-types'
 	import { mapState } from 'vuex';
 	import AppMenuLanguage from './app-menu-language';
 	
 	export default  {
 		name: 'app-toolbar',
+
 		components: {
 			AppMenuLanguage
 		},
+
 		computed: {
-			...mapState([
+			...mapState('common', [
 				'title'
 			])
 		},		
+		
 		methods: {
-			...mapMutations({
-				toggleDrawer: 'TOGGLE_DRAWER' 
+			...mapMutations('common', {
+				toggleDrawer: TOGGLE_DRAWER 
 			})
 		}
 	}

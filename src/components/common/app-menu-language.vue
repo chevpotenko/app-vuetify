@@ -19,19 +19,23 @@
 	import i18n from '../../i18n/lang';
 	import { mapState } from 'vuex';
 	import { mapMutations } from 'vuex';
+	import { SET_LANGUAGE } from '../../store/mutation-types';	
 
 	export default {
 		name: 'app-menu-language',
+
 		computed: {
-			...mapState([
+			...mapState('common', [
 				'languages',
 				'currentLanguage'
 			])
 		},
+
 		methods: {
-			...mapMutations({
-				setLanguage: 'SET_LANGUAGE'
+			...mapMutations('common', {
+				setLanguage: SET_LANGUAGE
 			}),
+
 			updateLanguage(item) {
 				i18n.locale = item.id;
 				this.setLanguage(item);
