@@ -11,7 +11,7 @@
 
 <template lang="html">
 	<div class="about-wr" :style="{ height: pageHeight }">
-		<section class="about" v-bar>
+		<section class="about" v-bar ref="scrollbar">
 			<div> 
 				<h1>About</h1>
 				<p>{{ $t("content") }}</p>
@@ -21,28 +21,50 @@
 </template>
 
 <script lang="js">
+	import Vue from 'vue';
+	import { mapState } from 'vuex';
 
 	export default  {
 		name: 'about',
-		props: [],
-		mounted() {
-
-		},
 		data() {
 			return {
 				pageHeight: 'auto'
 			}
 		},
-		methods: {
 
-		},
 		computed: {
-
+			...mapState([
+				'currentLanguage'
+			]),
+			newLanguage() {				
+				return this.currentLanguage
+			}
 		},
+
+		watch:{
+			newLanguage: function() {				
+				this.pageHeight = 'auto';
+				Vue.nextTick(() => {
+					this.pageHeight = this.getPageHeight();
+					this.$vuebar.refreshScrollbar(this.$refs.scrollbar);				
+				});
+			}
+		},
+
+		methods: {
+			getPageHeight() {
+				return  (
+					window.innerHeight -
+					(document.body.clientHeight - this.$el.clientHeight) +
+					'px'
+				);
+			}
+		},
+
 		mounted() {
-			this.$nextTick(() => {
-				this.pageHeight = window.innerHeight - (document.body.clientHeight - this.$el.clientHeight) + 'px';
-			})
+			this.$nextTick(() => {				
+				this.pageHeight = this.getPageHeight();
+			})			
 		}
 	}
 </script>

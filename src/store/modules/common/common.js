@@ -22,7 +22,7 @@ const state = {
             link: 'templates'
         },
         {
-            icon: 'bubble_chart',
+            icon: 'pages',
             title: 'About',
             link: 'about'
         }

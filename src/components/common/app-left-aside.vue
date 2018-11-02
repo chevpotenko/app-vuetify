@@ -23,20 +23,29 @@
 </template>
 
 <script lang="js">
+	import { mapState } from 'vuex';
+	import { mapMutations } from 'vuex';
+
 	export default  {
-		name: 'app-left-aside',
-		computed: {					
+		name: 'app-left-aside',		
+		computed: {
+			...mapState({
+				 menu: 'menu',
+				 drawer: 'drawer'
+			}),
 			drawer: {
 				get() {
 					return this.$store.state.drawer;
 				},
 				set(value) {
-					this.$store.commit('setDrawer', value);
+					this.setDrawer(value);
 				}
-			},
-			menu() {
-				return this.$store.state.menu;
 			}
+		},
+		methods: {
+			...mapMutations({
+				setDrawer: 'SET_DRAWER'
+			})
 		}
 	}
 </script>

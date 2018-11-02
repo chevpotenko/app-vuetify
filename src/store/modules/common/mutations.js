@@ -1,11 +1,15 @@
+import { SET_DRAWER } from '../../mutation-types'
+import { TOGGLE_DRAWER } from '../../mutation-types'
+import { SET_LANGUAGE } from '../../mutation-types'
+
 export default {
-    toggleDrawer(state) {							
-        state.drawer = !state.drawer;
-    },
-    setDrawer(state, value) {
+    [SET_DRAWER](state, value) {
         state.drawer = value;
     },      
-    setLanguage(state, language) {
+    [TOGGLE_DRAWER](state) {							
+        state.drawer = !state.drawer;
+    },
+    [SET_LANGUAGE](state, language) {
         state.currentLanguage = language
     }
 }

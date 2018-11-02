@@ -7,7 +7,7 @@
 			<v-list-tile
 			v-for="(item, index) in languages"
 			:key="index"
-			@click="setLanguage(item)"
+			@click="updateLanguage(item)"
 			>
 				<v-list-tile-title>{{ item.name }}</v-list-tile-title>
 			</v-list-tile>
@@ -17,21 +17,24 @@
 
 <script lang="js">
 	import i18n from '../../i18n/lang';
+	import { mapState } from 'vuex';
 	import { mapMutations } from 'vuex';
+
 	export default {
 		name: 'app-menu-language',
-		methods: {
-			setLanguage(item) {
-				i18n.locale = item.id;
-				this.$store.commit('setLanguage', item);
-			}
-		},
 		computed: {
-			languages() {
-				return this.$store.state.languages;
-			},
-			currentLanguage() {
-				return this.$store.state.currentLanguage;
+			...mapState([
+				'languages',
+				'currentLanguage'
+			])
+		},
+		methods: {
+			...mapMutations({
+				setLanguage: 'SET_LANGUAGE'
+			}),
+			updateLanguage(item) {
+				i18n.locale = item.id;
+				this.setLanguage(item);
 			}
 		}
 	}

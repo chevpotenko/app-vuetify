@@ -5,6 +5,11 @@ import About from '../components/pages/about/about.vue';
 
 export default [
 	{
+		name: 'about',
+		path: '/about',
+		component: About
+	},
+	{
 		name: 'main',
 		path: '/',
 		component: PageMain
@@ -18,10 +23,5 @@ export default [
 		name: 'templates',
 		path: '/templates',
 		component: Templates
-	},
-	{
-		name: 'about',
-		path: '/about',
-		component: About
-	}
+	}	
 ]
