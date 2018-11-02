@@ -35,6 +35,7 @@
 
 <script>
 	import defaultImage from '@/assets/road.jpg';
+	
 	export default {
 		name: 'edetailing-item',
 
@@ -44,7 +45,7 @@
 				required: true
 			}
 		},				
-		
+
 		computed: {
 			image: function() {
 				return this.item.image ? this.item.image : defaultImage;
