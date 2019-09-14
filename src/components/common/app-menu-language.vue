@@ -18,7 +18,7 @@
 <script lang="js">
 	import i18n from '../../i18n/lang';
 	import { mapState } from 'vuex';
-	import { mapMutations } from 'vuex';
+	import { mapActions } from 'vuex'
 	import { SET_LANGUAGE } from '../../store/mutation-types';	
 
 	export default {
@@ -31,14 +31,14 @@
 			])
 		},
 
-		methods: {
-			...mapMutations('common', {
+		methods: {			
+			...mapActions('common', {
 				setLanguage: SET_LANGUAGE
 			}),
 
 			updateLanguage(item) {
 				i18n.locale = item.id;
-				this.setLanguage(item);
+				this.setLanguage(item);	
 			}
 		}
 	}

@@ -25,7 +25,7 @@
 <script lang="js">
 	import { mapState } from 'vuex';
 	import { mapMutations } from 'vuex';
-	import { SET_DRAWER } from '../../store/mutation-types'
+	import { SET_DRAWER } from '../../store/mutation-types';
 
 	export default  {
 		name: 'app-left-aside',
