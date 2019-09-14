@@ -25,6 +25,11 @@ const state = {
             icon: 'pages',
             title: 'About',
             link: 'about'
+        },
+        {
+            icon: 'pages',
+            title: 'News',
+            link: 'news'
         }
     ],		
     currentLanguage: {

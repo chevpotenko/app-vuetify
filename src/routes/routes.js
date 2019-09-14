@@ -2,6 +2,7 @@ import PageMain from '../components/pages/main/page-main.vue';
 import Edetailing from '../components/pages/edetailing/edetailing.vue';
 import Templates from '../components/pages/templates/templates.vue';
 import About from '../components/pages/about/about.vue';
+import News from '../components/pages/news/news.vue';
 
 export default [
 	{
@@ -23,5 +24,10 @@ export default [
 		name: 'templates',
 		path: '/templates',
 		component: Templates
+	},
+	{
+		name: 'news',
+		path: '/news',
+		component: News
 	}	
 ]
